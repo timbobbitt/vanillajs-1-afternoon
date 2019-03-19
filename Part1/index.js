@@ -26,27 +26,30 @@ let square7 = keepTrack[6]
 let square8 = keepTrack[7]
 let square9 = keepTrack[8]
 
-if (square1 === square2 & square1 === square3) {
+if (square1 !== undefined && square1 === square2 && square1 === square3) {
     window.alert('{square1} is the winner');
     
-} else if (square4 === square5 & square4 === square6){
+} else if (square4 !== undefined && square4 === square5 && square4 === square6){
     window.alert('square1 is the winner');
-} else if (square7 === square8 & square7 === square9){
+} else if (square7 !== undefined && square7 === square8 && square7 === square9){
     window.alert('{square7 is the winner}')
-} else if (square1 === square4 & square1 === square7){
+} else if (square1 !== undefined && square1 === square4 && square1 === square7){
     window.alert('{square1 is the winner}')
-} else if (square2 === square5 & square2 === square8){
+} else if (square2 !== undefined && square2 === square5 && square2 === square8){
     window.alert('{square2 is the winner}')
-} else if (square3 === square6 & square3 === square9){
+} else if (square3 !== undefined && square3 === square6 && square3 === square9){
     window.alert('{square3 is the winner}')
-} else if (square1 === square5 & square1 === square9){
+} else if (square1 !== undefined && square1 === square5 && square1 === square9){
     window.alert('{square1 is the winner}')
-} else if (square3 === square5 & square3 === square7){
+} else if (square3 !== undefined && square3 === square5 && square3 === square7){
     window.alert('{square3 is the winner}')
 } 
+document.getElementById("reset").onclick = function (){
+    document.getElementById('keepTrack').innerHTML = "";
+}
 let fullBoard = true 
 for (let i = 0; i < keepTrack.length; i++);
-    if (keepTrack === undefined){
+    if (keepTrack[i] === undefined){
         fullBoard = false;
 
     } if (fullBoard = true){
